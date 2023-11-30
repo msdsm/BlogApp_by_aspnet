@@ -32,3 +32,29 @@
     - `LoginController.cs`作成
 - Viewの作成
     - `LoginController.cs`の`Index()`を右クリックして`Views/Login/Index.cshtml`作成
+
+### ArticlesControllerの実装
+- Create,Edit,Delete実装
+- Articleが追加されたときにCategoryの管理もこのコントローラで行う
+
+### CategoriesControllerの実装
+- Create,Editはない
+- Delete実装
+
+### 共通レイアウトの実装
+- Viewから作成
+- 参照のNugetパッケージからbootstrapインストール
+
+###　viewの実装
+- ArticlesのView
+- CategoriesのView
+- LoginのView
+
+### ルーティング、認証の実装
+- App_start/RouteConfig.cs変更
+- Web.config変更
+- 動作確認してバグ修正した
+
+### サイドメニューの実装
+
+### カテゴリーの入力候補の表示

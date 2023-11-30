@@ -31,6 +31,7 @@ namespace MyBlogApp.Models
 
         public virtual ICollection<Comment> Comments { get; set; }
 
+        [Required]
         [NotMapped]
         [DisplayName("カテゴリー")]
         public string CategoryName {  get; set; }
