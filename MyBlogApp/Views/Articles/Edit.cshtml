@@ -40,6 +40,17 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CategoryName, new { htmlAttributes = new { @class = "form-control", list = "categories" } })
                 @Html.ValidationMessageFor(model => model.CategoryName, "", new { @class = "text-danger" })
+                <datalist id="categories">
+                    @{
+                        var categories = (List<Category>)ViewBag.Categories;
+                        foreach (var item in categories)
+                        {
+                            <option>@Html.DisplayFor(model => item.CategoryName)</option>
+                        }
+                    }
+
+
+                </datalist>
             </div>
         </div>
 

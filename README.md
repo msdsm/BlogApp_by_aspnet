@@ -56,5 +56,12 @@
 - 動作確認してバグ修正した
 
 ### サイドメニューの実装
+- 共通処理として`CategoryFilterAttribute.cs`をCOntroller内でクラスとして実装
+    - `OnActionExecuted`メソッドは実行が終了すると毎回呼び出される
+- `ArticleController.cs`に適用する
+    - アノテーションするときは`[CategoryFilter]`のようにAttribute取り除く
+- `CategoriesController.cs`に適用
+- これによって各アテンションメソッドが実行された後にOnActonExecutedが呼び出されてdbからviewbagにカテゴリーがセットされる
+- 次に共通レイアウトページ編集
 
 ### カテゴリーの入力候補の表示
